@@ -1,0 +1,230 @@
+/* The Modal (background) */
+.ersrv-modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 9999;
+	/* Sit on top */
+	padding-top: 100px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black w/ opacity */
+}
+
+/* Modal Content */
+.ersrv-modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 30%;
+}
+
+/* The Close Button */
+.ersrv-close-modal {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.ersrv-close-modal:hover,
+.ersrv-close-modal:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.ersrv-modal-content h3 {
+	font-size: 22px;
+	color: #000;
+	margin-bottom: 40px !important;
+	margin-top: 0px;
+}
+
+div#ersrv-export-reservations-modal .ersrv-modal-content {
+    width: 20%;
+}
+.ersrv-date-ranges {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.ersrv-date-ranges .from,
+.ersrv-date-ranges .to,
+.ersrv-modal-content .format,
+.ersrv-blockout-dates-message{
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	max-width: 100%;
+	flex-basis: 100%;
+}
+.ersrv-date-ranges .from label,
+.ersrv-date-ranges .to label,
+.ersrv-blockout-dates-message label,
+.ersrv-date-ranges label {
+	font-size: 14px;
+	font-weight: 600;
+	margin-right: 8px;
+	min-width: 65px;
+}
+/* .ersrv-date-ranges .from label,
+.ersrv-date-ranges .to label,
+.ersrv-modal-content .format label{
+	min-width: 50px;
+    margin: 0px;
+} */
+.ersrv-date-ranges .from{
+	margin-bottom: 10px;
+}
+.ersrv-date-ranges input,
+.ersrv-modal-content .format select{
+	width: 100%;
+}
+
+.submit-export {
+	overflow: hidden;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 2px;
+}
+
+.submit-export button {
+	width: 120px;
+	height: 40px;
+	font-size: 16px !important;
+	margin-top: 15px !important;
+}
+
+.submit-export button:hover {
+	color: #fff;
+	background: #0071a1;
+}
+
+/* add new customer form */
+.ersrv-new-customer-details {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	max-height: 270px;
+	overflow-y: auto;
+}
+
+.ersrv-new-customer-details .ersrv-customer-field {
+	display: flex;
+	flex-flow: column wrap;
+	margin-bottom: 12px;
+	max-width: calc(100% / 2 - 10px);
+	width: 100%;
+	margin-right: 10px;
+}
+
+.ersrv-new-customer-details .ersrv-customer-field.ersrv-customer-field.password {
+	max-width: 100%;
+	width: 100%;
+}
+
+.ersrv-new-customer-details input[type=date],
+.ersrv-new-customer-details input[type=datetime-local],
+.ersrv-new-customer-details input[type=datetime],
+.ersrv-new-customer-details input[type=email],
+.ersrv-new-customer-details input[type=month],
+.ersrv-new-customer-details input[type=number],
+.ersrv-new-customer-details input[type=password],
+.ersrv-new-customer-details input[type=search],
+.ersrv-new-customer-details input[type=tel],
+.ersrv-new-customer-details input[type=text],
+.ersrv-new-customer-details input[type=time],
+.ersrv-new-customer-details input[type=url],
+.ersrv-new-customer-details input[type=week] {
+	width: 100%;
+}
+
+.ersrv-new-customer-details .ersrv-customer-field label {
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+
+.ersrv-form-field-error,
+.ersrv-form-error {
+	color: red;
+	font-size: 13px;
+}
+
+.ersrv-new-customer-details .ersrv-customer-field.password {
+	/* flex-flow: row wrap; */
+	position: relative;
+}
+
+/* .ersrv-new-customer-details .ersrv-customer-field.password label {
+	max-width: 100%;
+	flex-basis: 100%;
+}
+.ersrv-new-customer-details .ersrv-customer-field.password input#ersrv-customer-password {
+    width: auto;
+} */
+
+/* .ersrv-new-customer-details .ersrv-customer-field.password input,
+.ersrv-new-customer-details .ersrv-customer-field.password input#ersrv-customer-password{
+	max-width: calc(100% - 120px);
+    flex-basis: calc(100% - 120px);
+} */
+.ersrv-new-customer-details .ersrv-customer-field.password .ersrv-generate-password {
+	position: absolute;
+	top: 32px;
+	right: 10px;
+}
+
+.submit-customer {
+	text-align: right;
+	margin-right: 10px;
+}
+
+.ersrv-new-customer-details .ersrv-customer-field select {
+	max-width: 100%;
+}
+
+hr {
+	width: 100%;
+	height: 0px;
+}
+
+@media(max-width:1140px) {
+	.ersrv-modal-content {
+		width: 40%;
+	}
+}
+@media(max-width:991px){
+	.ersrv-date-ranges{
+		padding: 2px 0px;
+	}
+}
+
+@media(max-width:767px) {
+	.ersrv-modal-content {
+		width: 60%;
+	}
+
+	.ersrv-new-customer-details .ersrv-customer-field {
+		max-width: calc(100% / 1 - 10px);
+		width: 100%;
+		margin-right: 10px;
+	}
+
+	.ersrv-new-customer-details .ersrv-customer-field.password .ersrv-generate-password {
+		position: absolute;
+		top: 0;
+		right: 0px;
+	}
+}

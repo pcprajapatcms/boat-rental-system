@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+$font-lato:'Lato',sans-serif;
+$font-poppins:'Poppins',sans-serif;
+$primary: #0c71c3;
+$primary-300:#d1e6f7;
+$seconadry: #3e3e3e;
+$accent:#3ab166;
+$accent-300:#cbefd9;
+$accent-700:#17763a;
+$white: #fff;
+$white-300: #fafafa;
+$white-500: rgba(255, 255, 255, 0.5);
+$black: #000;
+$black-200: rgba(0, 0, 0, 0.2);
+$black-300: rgba(0, 0, 0, 0.3);
+$black-400: rgba(0, 0, 0, 0.4);
+$black-500: rgba(0, 0, 0, 0.5);
+$black-600: rgba(0, 0, 0, 0.6);
+$gray:#8a8f9c;
+$transparent : rgba(0,0,0,0.0);
+$pinterest:#E60023;
+$twiiter:#1DA1F2;
+$facebook:#4267B2;
+
+$colors:(primary: #0c71c3,
+    primary-300:#d1e6f7,
+    seconadry: #3e3e3e,
+    accent:#3ab166,
+    accent-300:#cbefd9,
+    accent-700:#17763a,
+    white: #fff,
+    white-300: #fafafa,
+    white-500: rgba(255, 255, 255, 0.5),
+    black: #000,
+    black-200: rgba(0, 0, 0, 0.2),
+    black-300: rgba(0, 0, 0, 0.3),
+    black-400: rgba(0, 0, 0, 0.4),
+    black-500: rgba(0, 0, 0, 0.5),
+    black-600: rgba(0, 0, 0, 0.6),
+    gray:#8a8f9c,
+    transparent : rgba(0,0,0,0.0),
+);
+@each $color,
+$value in $colors {
+    .color-#{$color} {
+        color: $value;
+    }
+
+    .bgcolor-#{$color} {
+        background-color: $value;
+    }
+
+    .border-color-#{$color} {
+        border-color: $value;
+    }
+}
+
+/* */
+$count: 12;
+
+@while $count <=40 {
+    .font-size-#{$count} {
+        font-size: $count + px;
+    }
+
+    $count: $count+1;
+}
+
+$count: 18;
+
+@while $count <=60 {
+    .line-height-#{$count} {
+        line-height: $count + px;
+    }
+
+    $count: $count+1;
+}
+
+$count: 0;
+@while $count <=10 {
+    .letter-spacing-#{$count} {
+        letter-spacing: $count / 10 + px;
+    }
+
+    $count: $count+1;
+}
+
+
+@mixin ratio($w,$h) {
+    width: $w;
+    height: $h;
+}
+@mixin sqaure($size) {
+    width: $size;
+    height: $size;
+}
+@mixin flex-center($display:flex) {
+    display: $display;
+    align-items: center;
+    justify-content: center;
+}
+
+$mobile: 767;
+$tablet: 768;
+$large: 1024;
+$desktop: 1280;
+
+@mixin mobile {
+    @media only screen and (max-width: $mobile * 1px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media only screen and (min-width: $tablet * 1px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media only screen and (min-width: $large * 1px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: $desktop * 1px) {
+        @content;
+    }
+}
+
+
+body {
+    font-family: $font-lato;
+}
+
+.font-lato {
+    font-family: $font-lato;
+}
+
+.font-Poppins {
+    font-family: $font-poppins;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.font-weight-medium {
+    font-weight: 500;
+}
+
+.font-weight-semibold {
+    font-weight: 600;
+}
+
+.text-decoration-line-through {
+    text-decoration: line-through;
+}
+
+.rounded-xl {
+    border-radius: 5.8px;
+}
+
+.date-control {
+    background-image: url("../../images/planner.png") !important;
+    background-position: 90% !important;
+    background-size: 20px !important;
+    background-repeat: no-repeat !important;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    &:focus,
+    &:hover {
+        background-image: url("../../images/planner_active.png") !important;
+    }
+}
+.ship-icon-field{
+    background-image: url("../../images/accomodation_gray.png") !important;
+    background-position: 90% !important;
+    background-size: 20px !important;
+    background-repeat: no-repeat !important;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    &:focus,
+    &:hover {
+        background-image: url("../../images/accomodation_green.png") !important;
+    }
+}
+.ersrv-item-search-location{
+    background-image: url("../../images/mapPin_gray.png") !important;
+    background-position: 96% !important;
+    background-size: 20px !important;
+    background-repeat: no-repeat !important;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    &:focus,
+    &:hover {
+        background-image: url("../../images/mapPin_green.png") !important;
+    }
+}
+.date-control.ship-icon-field.ersrv-item-search-location {
+    @extend .ersrv-item-search-location;
+}
+.date-control.ship-icon-field{
+    @extend .ship-icon-field;
+}
+
+*:focus,
+.focus-none,
+.bootstrap-select .dropdown-toggle:focus,
+.bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.bootstrap-select>.dropdown-toggle {
+    &::after {
+        border: none !important;
+        background-image: url(../../images/down_arrow_green.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 15px;
+        height: 10px;
+    }
+
+    &:hover,
+    &:focus {
+        &::after {
+            -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
+        }
+    }
+}
+.btn-primary{
+    @extend .color-white;
+    @extend .bgcolor-primary;
+    @extend .border-color-primary;
+}
+.btn-outline-fill-primary{
+    @extend .color-primary;
+    @extend .bgcolor-primary-300;
+    @extend .border-color-primary;
+    &:hover,&:active,&:focus,
+    &.hover,&.active,&.focus{
+        @extend .color-white;
+        @extend .bgcolor-primary;
+    }
+}
+.btn-accent{
+    @extend .color-white;
+    @extend .bgcolor-accent;
+    @extend .border-color-accent;
+    &:hover,&:active,&:focus,
+    &.hover,&.active,&.focus{
+        @extend .color-black;
+        @extend .bgcolor-accent-300;
+    }
+}
+.btn-outline-primary{
+    @extend .color-primary;
+    @extend .border-color-primary;
+    @extend .bgcolor-transparent;
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: $white;
+    text-decoration: none;
+    background-color: $primary;
+}
+.search-page .btn-xl{
+    padding: 15px 41px;
+}

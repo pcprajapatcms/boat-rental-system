@@ -1,0 +1,556 @@
+ul.wc-tabs li.reservation_details_tab a::before,
+ul.wc-tabs li.reservation_blockout_dates_tab a::before {
+	font-family: Dashicons;
+	content: "\f508" !important;
+}
+
+.ersrv-remove-blockout-date-html::before,
+.ersrv-remove-amenity-html::before {
+	font-family: Dashicons;
+	content: "\f158" !important;
+}
+
+.ersrv-add-amenity-html::before,
+.ersrv-add-blockedout-date-html::before {
+	font-family: Dashicons;
+	content: "\f132" !important;
+}
+
+.reservation-tab-setting-heading {
+	margin-left: 10px;
+}
+
+.ersrv-copy-adult-charge {
+	margin-left: 10px;
+}
+
+.non-clickable {
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.dropdown.rothco {
+	display: inline-block;
+	margin-left: 4px;
+	padding: 3px 8px;
+	position: relative;
+	text-decoration: none;
+	border: 1px solid #0071a1;
+	border-radius: 2px;
+	text-shadow: none;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: normal;
+	color: #0071a1;
+	background: #f3f5f6;
+	cursor: pointer;
+	top: -3px;
+}
+
+.dropdown.rothco .dropbtn {
+	font-size: 14px;
+	border: none;
+	outline: none;
+	color: #0071a1;
+	padding: 0;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+	font-weight: 600;
+}
+
+.navbar a:hover,
+.dropdown.rothco:hover .dropbtn {
+	background-color: #f3f5f6;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	top: 100%;
+	left: 0;
+	width: 210px;
+}
+
+.dropdown-content a {
+	float: none;
+	color: #0071a1;
+	padding: 8px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+.dropdown.rothco:hover .dropdown-content {
+	display: block;
+}
+
+.woocommerce_options_panel .form-field.amenities-row,
+.woocommerce_options_panel .form-field.blockout-dates-row {
+	padding-left: 16px !important;
+	display: flex;
+	margin: 0px;
+}
+.woocommerce_options_panel p.form-field,
+.woocommerce_options_panel fieldset.form-field{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.amenities-row .short,
+.blockout-dates-row .short {
+	width: calc(100%/ 2 - 8px) !important;
+	margin-right: 8px;
+}
+.ersrv-amenity-charge-type{
+	margin-right: 8px !important;
+}
+.amenities-list .amenities-row{
+    margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.reservations-amenities-header,
+.reservations-blockout-dates-header {
+	display: flex;
+	align-items: center;
+}
+
+.reservations-amenities-header .reservation-tab-setting-heading,
+.reservations-blockout-dates-header .reservation-tab-setting-heading {
+	margin-right: 1.33em;
+}
+
+.ersrv-blockout-dates-message {
+	margin-top: 10px;
+}
+
+.ersrv-blockout-dates-message textarea {
+	width: 100%;
+}
+
+.ersrv-form-description-text {
+	color: #b2b2b2;
+	font-size: 12px !important;
+}
+
+.ersrv-create-new-customer-link {
+	font-size: 12px;
+}
+
+.ersrv-new-reservation-limit-text {
+	display: block;
+}
+
+/* The switch - the box around the slider */
+.ersrv-switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.ersrv-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.ersrv-switch-slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: .4s;
+}
+
+.ersrv-switch-slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	transition: .4s;
+}
+
+.ersrv-switch-input:checked+.ersrv-switch-slider {
+	background-color: #2196F3;
+}
+
+.ersrv-switch-input:focus+.ersrv-switch-slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+.ersrv-switch-input:checked+.ersrv-switch-slider:before {
+	transform: translateX(26px);
+}
+
+.ersrv-new-reservation-single-amenity {
+	width: 30%;
+	float: left;
+}
+
+.ersrv-new-reservation-single-amenity.mtop {
+	margin-top: 5px;
+}
+
+.ersrv-reservation-error {
+	color: red;
+}
+
+.wc-action-button.wc-action-button-ersrv-reservation-receipt::after {
+	font-family: Dashicons;
+	content: "\f316";
+}
+
+.new-reservation-summary .form-table th,
+.new-reservation-summary .form-table td {
+	padding: 8px 20px 8px 0px;
+}
+
+.button.ersrv-add-new-reservation {
+	margin-top: 20px;
+}
+
+@media(max-width:1024px) {
+
+	.ersrv-new-reservation-checkin-checkout-row input[type="text"],
+	.ersrv-new-reservation-accomodation-row input[type="number"] {
+		max-width: calc(100% / 2 - 8px) !important;
+		width: calc(100% / 2 - 8px) !important;
+		float: left;
+		margin-right: 7px;
+	}
+}
+
+@media(max-width:991px) {
+
+	.new-reservation-summary .form-table td,
+	.new-reservation-summary .form-table th,
+	.new-reservation-summary .label-responsive {
+		display: table-cell;
+		vertical-align: middle;
+		width: auto;
+	}
+
+	.new-reservation-summary .form-table th {
+		width: 200px;
+	}
+}
+
+@media(max-width:767px) {
+	.ersrv-new-reservation-single-amenity {
+		width: 50%;
+		float: left;
+	}
+}
+
+@media(max-width:782px) {
+
+	#ui-datepicker-div .ui-datepicker-calendar tr th,
+	#ui-datepicker-div .ui-datepicker-calendar tr td,
+	.ersrv-item-availability-calendar .ui-datepicker-inline .ui-datepicker-calendar tr th,
+	.ersrv-item-availability-calendar .ui-datepicker-inline .ui-datepicker-calendar tr td {
+		display: table-cell !important;
+	}
+}
+
+/* Toast CSS */
+.ersrv-notification-wrapper{
+	padding: 1rem;
+	left: 0px;
+	bottom: 40px !important;
+	pointer-events: none;
+}
+.ersrv-notification{
+    border: 1px solid transparent;
+    transform: translateY(100px);
+    transition: 0.3s ease-in-out;
+    transform-origin: bottom;
+    pointer-events: auto;
+    z-index: 99999;
+}
+.ersrv-notification.toast.hide{
+    display: block;
+}
+.ersrv-notification.fade:not(.show),
+.ersrv-notification.toast:not(.hide){
+    transform: translateY(0px);
+    transform-origin: top;
+}
+.ersrv-notification.bg-success *,
+.ersrv-notification.bg-danger *{
+    color: #fff;
+}
+.ersrv-notification.bg-warning *{
+    color: #000;
+}
+.ersrv-notification .close{
+    background-color: transparent !important;
+}
+.ersrv-notification a{
+    text-decoration: underline;
+}
+.position-fixed{
+	position: fixed;
+}
+.ersrv-notification-wrapper .toast{
+	margin: 0px auto;
+}
+.ersrv-notification-wrapper .toast .mr-2{
+	margin-right: 0.5rem;
+}
+.toast {
+	max-width: 350px;
+	overflow: hidden;
+	font-size: 0.875rem;
+	background-color: rgba(255, 255, 255, 0.85);
+	background-clip: padding-box;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	border-radius: 0.25rem;
+}
+
+.toast:not(:last-child) {
+	margin-bottom: 0.75rem;
+}
+.toast .close {
+    margin-left: auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+	border: 1px solid transparent;
+	pointer-events: auto;
+	cursor: pointer;
+}
+.toast .close:not(:disabled):not(.disabled):focus,
+.toast .close:not(:disabled):not(.disabled):hover{
+	opacity: 0.75;
+}
+.toast.showing {
+	opacity: 1;
+}
+
+.toast.show {
+	display: block;
+	opacity: 1;
+}
+
+.toast.hide {
+	display: none;
+}
+
+.toast-header {
+	display: flex;
+	align-items: center;
+	padding: 0.25rem 0.75rem;
+	color: #6c757d;
+	background-color: transparent;
+	background-clip: padding-box;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.toast-body {
+	padding: 0.75rem;
+}
+.bg-success {
+    background-color: #28a745!important
+}
+.bg-warning {
+    background-color: #ffc107!important
+}
+.bg-danger {
+    background-color: #dc3545!important
+}
+/* end here */
+.ersrv-cancellation-request-actions .button{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	white-space: normal;
+}
+.column-order_status mark.order-status {
+    padding: 4px 5px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* Tooltip css starts */
+/*tipped element. should be inline-block or block*/
+.tooltip {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    color: #3bb4e5;
+    border-bottom: 0.05em dotted #3bb4e5;
+    box-sizing: border-box;
+    font-style: normal;
+    transition: all .25s ease-in-out
+}
+
+.tooltip:hover {
+    color: #069;
+    border-bottom: 0.05em dotted #069
+}
+
+/*the tip*/
+.tooltip:before {
+    content: attr(data-tooltip);
+    font-size: 14px;
+    position: absolute;
+    background: #333;
+    color: #fff;
+    line-height: 1.2em;
+    padding: 0.5em;
+    font-style: normal;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); */
+    min-width: 150px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+    letter-spacing: 0;
+    font-weight: 600;
+}
+
+.tooltip:after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    content: '';
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after {
+    visibility: visible;
+    opacity: 1
+}
+
+/*top*/
+.tooltip.tip-top:before {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 7px));
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.tooltip.tip-top:after {
+    border-width: 8px 8px 0 8px;
+    border-color: #333 transparent transparent transparent;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/*bottom*/
+.tooltip:before {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(100% + 7px));
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.tooltip:after {
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #333 transparent;
+    bottom: -8px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/*left*/
+.tooltip.tip-left:before {
+    left: 0;
+    top: 50%;
+    transform: translate(calc(-100% - 7px), -50%);
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.tooltip.tip-left:after {
+    border-width: 8px 0 8px 8px;
+    border-color: transparent transparent transparent #333;
+    left: -8px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+/*right*/
+.tooltip.tip-right:before {
+    right: 0;
+    top: 50%;
+    transform: translate(calc(100% + 7px), -50%);
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.tooltip.tip-right:after {
+    border-width: 8px 8px 8px 0;
+    border-color: transparent #333 transparent transparent;
+    right: -8px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+/* tooltip css end */
+.ersrv-driving-license-container.edit-order a{
+	transition: all ease-in-out 0.25s;
+}
+.ersrv-driving-license-container.edit-order a span{
+	vertical-align: middle;
+	width: 0px;
+	opacity: 0;
+	transform: translateX(-16px);
+	transition: all ease-in-out 0.25s;
+}
+.ersrv-driving-license-container.edit-order a.view span{
+	transform: translateX(-16px) translateY(-2px);
+}
+.ersrv-driving-license-container.edit-order a:hover span{
+	width: auto;
+	margin-left: 4px;
+	opacity: 1;
+	transform:none;
+}
+.ersrv-driving-license-container.edit-order a.view:hover span{
+	transform: translateX(0px) translateY(-2px);
+}
+.button[class*="ersrv-"]::before,
+.button[class^="ersrv-"]::before{
+	vertical-align: middle;
+}
+a.button.wc-action-button.wc-action-button-ersrv-reservation-edit.ersrv-reservation-edit::after {
+    content: "\f464";
+}
+.ersrv-edit-order-actions h4 {
+    margin-top: 0px;
+}
+.reservation_captain_settings_options a::before{
+	content: "\f12e" !important;
+}
